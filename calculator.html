@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 body{
+		 	background: lightgreen;
+		 }
+		 h1{
+		 	background: red;
+		 	color: black;
+		 	font-size: 1rem;
+		 	padding-left: 200px;
+		 }
+		 .abc{  
+		 	padding-left: 1rem;
+		 	background: black;
+		 	border-radius: 0.3rem;
+		 	width: 35%;
+		 	height: 50vh;
+		 }
+	     input{
+	     	margin-top: 1rem;
+	     	background: #c0c0c0;
+	     	border-radius: 0.3rem;
+	     	margin-bottom: 1rem;
+	     }
+	     button{ 
+	     	background: skyblue;
+	     	border-radius: 0.3rem;
+	     	border-color: skyblue;
+	     }
+	</style>
+</head>
+<body>
+	<h1>CALCULATOR</h1>
+	<div class="abc">
+   <input type="text" id="inp" readonly><br>
+   <button onclick="run(1)">1</button>
+   <button onclick="run(2)">2</button>
+   <button onclick="run(3)">3</button>
+   <button onclick="run(4)">4</button>
+   <button onclick="run(5)">5</button>
+   <button onclick="run(6)">6</button><br>
+   <button onclick="run(7)">7</button>
+   <button onclick="run(8)">8</button>
+   <button onclick="run(9)">9</button>
+   <button onclick="run(0)">0</button>
+   <button onclick="run('%')">%</button>
+   <button onclick="run('-')">-</button><br>
+   <button onclick="run('+')">+</button>
+   <button onclick="eql()">=</button>
+   <button onclick="clr()">c</button>
+   <button onclick="run('(')">(</button>
+   <button onclick="run(')')">)</button>
+   <button onclick="run('.')">.</button>
+ </div>
+<script type="text/javascript">
+
+            const inp=document.getElementById('inp');
+            const run=(w) => {
+            	inp.value+=w;
+            }
+
+            const eql = () => {
+            	let inp_value = inp.value;
+            	let cal = eval (inp_value);
+            	inp.value = cal;
+            };
+
+            const clr = () => {
+            	inp.value="";
+            }
+</script>
+</body>
+</html>
